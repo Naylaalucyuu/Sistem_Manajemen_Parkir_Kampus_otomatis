@@ -80,6 +80,7 @@ Untuk mengatasi permasalahan tersebut, diperlukan sistem berbasis basis data yan
 
 ##
 ## DIAGRAM PROSES
+<img width="485" height="2560" alt="image" src="https://github.com/user-attachments/assets/85e0c4bb-cf16-4aca-8a60-61dfeeb6dfa6" />
 
 
 ##
