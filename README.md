@@ -82,7 +82,6 @@ Untuk mengatasi permasalahan tersebut, diperlukan sistem berbasis basis data yan
 ## DIAGRAM PROSES
 <img width="485" height="2560" alt="image" src="https://github.com/user-attachments/assets/85e0c4bb-cf16-4aca-8a60-61dfeeb6dfa6" />
 
-
 ##
 ## PEMBAGIAN TUGAS ANGGOTA
 1. Zahra Dea Amanda (2501020118) = Bertugas dalam membuat latar belakang dan tujuan sistem.
@@ -92,3 +91,4 @@ Untuk mengatasi permasalahan tersebut, diperlukan sistem berbasis basis data yan
 
 ##
 ## LINK RIPOSITORY GITHUB
+https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
