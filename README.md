@@ -97,3 +97,21 @@ https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
 ## ERD (Entity Relationship Diagram)
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a8c48150-1eec-466c-bdae-ef9bc34ba06a" />
 
+## Penjelasan Entitas Dan Relasi
+## Entitas 
+1. User
+   Digunakan Digunakan untuk menyimpan data seluruh pengguna sistem seperti admin, mahasiswa, dosen, staf kampus, petugas parkir, dan pengunjung.
+2. Kendaraan
+   Menyimpan data kendaraan yang terdaftar pada sistem parkir kampus.
+3. Parkir
+   Mencatat seluruh aktivitas kendaraan saat memasuki dan keluar area parkir termasuk waktu dan durasi parkir.
+4. Slot_Parkir
+   Digunakan untuk menyimpan informasi slot parkir beserta status ketersediaannya.
+## Relasi
+1. User → Kendaraan (1:M)
+   Satu pengguna dapat mendaftarkan lebih dari satu kendaraan.
+2. Kendaraan → Parkir (1:M)
+   Satu kendaraan dapat melakukan parkir lebih dari satu kali.
+3. Slot_Parkir → Parkir (1:M)
+   Satu slot dapat digunakan berkali-kali pada transaksi parkir yang berbeda.
+   
