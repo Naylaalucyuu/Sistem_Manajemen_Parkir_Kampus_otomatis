@@ -96,7 +96,7 @@ https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
 --- 
 # PROGRESS 2
 ## ERD (Entity Relationship Diagram)
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a8c48150-1eec-466c-bdae-ef9bc34ba06a" />
+<img width="1672" height="941" alt="erd parkir otomatis" src="https://github.com/user-attachments/assets/54d7e9f1-5639-413e-9d71-7f44586bb943" />
 
 ##
 ## Penjelasan Entitas Dan Relasi
