@@ -94,4 +94,4 @@ Untuk mengatasi permasalahan tersebut, diperlukan sistem berbasis basis data yan
 https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
 
 # PROGRESS 2
-
+resydtyk
