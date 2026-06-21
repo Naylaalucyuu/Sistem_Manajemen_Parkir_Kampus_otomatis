@@ -188,3 +188,11 @@ Struktur akhir:
    (id_slot, nomor_slot, status_slot)
 
 Seluruh atribut non-key hanya bergantung pada primary key masing-masing.
+
+## Relevasi Analisis Kebutuhan
+Berdasarkan hasil perancangan basis data dan normalisasi, terdapat beberapa revisi:
+1. Menambahkan relasi antara tabel Parkir dan Slot_Parkir agar sistem dapat menampilkan ketersediaan slot secara real-time.
+2. Menambahkan foreign key pada tabel Parkir untuk menghubungkan aktivitas parkir dengan slot yang digunakan.
+3. Data kendaraan dipisahkan dari tabel User agar mendukung satu pengguna memiliki lebih dari satu kendaraan.
+4. Struktur database disusun hingga bentuk 3NF untuk mengurangi redundansi data.
+5. Sistem tetap mendukung kebutuhan fungsional seperti pencatatan kendaraan masuk, keluar, pencarian kendaraan, serta laporan parkir.
