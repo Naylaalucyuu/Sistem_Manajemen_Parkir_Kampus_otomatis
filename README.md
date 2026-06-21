@@ -7,7 +7,7 @@ Proyek implementasi Basis Data relasional untuk Sistem Manajemen Parkir Kampus O
 ### Muhammad Faisyar Rizqi (2501020119)
 ### Dara Puspitasari (2501020120)
 
-## 
+# PROGRESS 1
 ## STUDI KASUS
 Sistem Manajemen Parkir Kampus Otomatis merupakan sistem berbasis basis data yang dirancang untuk membantu pengelolaan parkir kendaraan di lingkungan kampus secara digital dan otomatis. Sistem ini digunakan untuk mencatat aktivitas kendaraan mulai dari registrasi kendaraan, proses masuk dan keluar area parkir, hingga pemantauan ketersediaan slot parkir secara real-time.
 Sistem ini melibatkan beberapa pengguna seperti mahasiswa, dosen, staf kampus, petugas parkir, admin, dan pengunjung. Setiap kendaraan yang menggunakan fasilitas parkir akan dicatat ke dalam basis data sehingga informasi kendaraan dapat dikelola dengan lebih teratur dan mudah diakses. Selain itu, sistem juga mampu menyimpan riwayat penggunaan parkir yang dapat digunakan untuk kebutuhan monitoring dan pelaporan.
@@ -92,3 +92,6 @@ Untuk mengatasi permasalahan tersebut, diperlukan sistem berbasis basis data yan
 ##
 ## LINK RIPOSITORY GITHUB
 https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
+
+# PROGRESS 2
+
