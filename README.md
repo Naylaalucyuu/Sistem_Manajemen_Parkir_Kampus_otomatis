@@ -115,3 +115,62 @@ https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
 3. Slot_Parkir → Parkir (1:M)
    Satu slot dapat digunakan berkali-kali pada transaksi parkir yang berbeda.
    
+# 4. Normalisasi (UNF → 1NF → 2NF → 3NF)
+
+## UNF (Unnormalized Form)
+
+| id_user | nama  | kendaraan       | parkir      | slot |
+| ------- | ----- | --------------- | ----------- | ---- |
+| 001     | Dea   | BP1234XX, Motor | Masuk 08.00 | A01  |
+
+Masih terdapat data gabungan dan redundansi.
+
+---
+
+## 1NF (First Normal Form)
+
+Data dipecah menjadi atribut tunggal.
+
+| id_user | nama | no_polisi | jenis_kendaraan | nomor_slot |
+| ------- | ---- | --------- | --------------- | ---------- |
+
+Setiap kolom sudah memiliki satu nilai.
+
+---
+
+## 2NF (Second Normal Form)
+
+Data dipisahkan berdasarkan ketergantungan terhadap primary key.
+
+Tabel:
+
+* User
+* Kendaraan
+* Parkir
+* Slot_Parkir
+
+Menghilangkan pengulangan data kendaraan dan slot.
+
+---
+
+## 3NF (Third Normal Form)
+
+Menghilangkan ketergantungan transitif.
+
+Struktur akhir:
+
+User
+(id_user, nama, username, password, role)
+
+Kendaraan
+(id_kendaraan, no_polisi, jenis_kendaraan, pemilik, id_user)
+
+Parkir
+(id_parkir, id_kendaraan, waktu_masuk, waktu_keluar, durasi, status, id_slot)
+
+Slot_Parkir
+(id_slot, nomor_slot, status_slot)
+
+Seluruh atribut non-key hanya bergantung pada primary key masing-masing.
+
+---
