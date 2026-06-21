@@ -115,7 +115,7 @@ https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
 3. Slot_Parkir → Parkir (1:M)
    Satu slot dapat digunakan berkali-kali pada transaksi parkir yang berbeda.
    
-# 4. Normalisasi (UNF → 1NF → 2NF → 3NF)
+# Normalisasi (UNF → 1NF → 2NF → 3NF)
 
 ## UNF (Unnormalized Form)
 
