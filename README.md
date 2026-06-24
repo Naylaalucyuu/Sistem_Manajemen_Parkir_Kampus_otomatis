@@ -54,34 +54,35 @@ Untuk mengatasi permasalahan tersebut, diperlukan sistem berbasis basis data yan
 ### Tabel User
 1. id_user INT
 2. nama VARCHAR (100)
-3. username VARCHAR (50)
-4. password VARCHAR (255)
-5. role VARCHAR (20)
+3.	role ENUM 
+4.	no_hp VARCHAR (15)
+
 
 ### Tabel Kendaraan 
 1. id_kendaraan INT
 2. no_polisi VARCHAR (15)
 3. jenis_kendaraan VARCHAR (20)
-4. pemilik VARCHAR (100)
-5. id_user INT
+4. id_user INT
 
 ### Tabel Parkir
 1. id_parkir INT
 2. id_kendaraan INT
-3. id_slot INT
-4. waktu_masuk DATETIME
-5. waktu_keluar DATETIME
-6. durasi INT
-7. status VARCHAR (20)
+3.	id_slot INT
+4.	waktu_masuk DATETIME
+5.	waktu_keluar DATETIME
+
 
 ### Tabel Slot Parkir
 1. id_slot INT
-2. nomor_slot VARCHAR (10)
-3. status_slot VARCHAR(20)
+2. nomor_slot VARCHAR (20)
+3. status_slot ENUM
 
 ### Tabel Pembayaran
-
-
+1.	id_pembayaran INT
+2.	id_parkir
+3.	durasi_jam INT
+4.	biaya DECIMAL
+5.	status_bayar ENUM
 
 ##
 ## DIAGRAM PROSES
