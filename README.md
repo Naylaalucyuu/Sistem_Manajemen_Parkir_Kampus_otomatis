@@ -196,3 +196,20 @@ Berdasarkan hasil perancangan basis data dan normalisasi, terdapat beberapa revi
 3. Data kendaraan dipisahkan dari tabel User agar mendukung satu pengguna memiliki lebih dari satu kendaraan.
 4. Struktur database disusun hingga bentuk 3NF untuk mengurangi redundansi data.
 5. Sistem tetap mendukung kebutuhan fungsional seperti pencatatan kendaraan masuk, keluar, pencarian kendaraan, serta laporan parkir.
+
+--- 
+# PROGRESS 2
+1. Script SQL DDL (CREATE DATABASE, CREATE TABLE)
+<img width="1256" height="487" alt="image" src="https://github.com/user-attachments/assets/3cb7060e-0a0e-4a9e-adb6-e934c45e22d5" />
+Perintah CREATE DATABASE sistem_manajemen_parkir_kampus_otomatis_klmpk6; digunakan untuk membuat sebuah database baru yang akan menjadi tempat penyimpanan seluruh data pada sistem parkir kampus, seperti data pengguna, kendaraan, slot parkir, aktivitas parkir, dan pembayaran, kemudian perintah USE sistem_manajemen_parkir_kampus_otomatis_klmpk6; digunakan untuk mengaktifkan database tersebut agar bisa digunakan; setelah itu, perintah CREATE TABLE dijalankan untuk membuat struktur tabel di dalam database, seperti tabel user, kendaraan, slot_parkir, parkir, dan pembayaran, di mana setiap tabel memiliki kolom dengan tipe data tertentu, primary key sebagai identitas unik, serta foreign key untuk menghubungkan antar tabel sehingga data menjadi terorganisir dan saling terintegrasi dengan baik dalam mendukung jalannya sistem manajemen parkir otomatis.
+
+3. Constraint (PK, FK, UNIQUE, NOT NULL)
+<img width="1111" height="835" alt="image" src="https://github.com/user-attachments/assets/55bcffa0-3fe3-4e38-aa5f-835ec6f59f6c" />
+## Primary Key (PK)
+Primary Key adalah kunci utama yang digunakan untuk mengidentifikasi setiap data agar tidak ada yang sama. Pada database ini, setiap tabel memiliki PK yaitu: id_user pada tabel user, id_kendaraan pada tabel kendaraan, id_slot pada tabel slot_parkir, id_parkir pada tabel parkir, dan id_pembayaran pada tabel pembayaran. Semua PK menggunakan AUTO_INCREMENT sehingga nilainya bertambah otomatis.
+## Foreign Key (FK)
+Foreign Key digunakan untuk menghubungkan antar tabel. Contohnya, id_user pada tabel kendaraan menjadi FK yang mengacu ke user(id_user), lalu id_kendaraan dan id_slot pada tabel parkir masing-masing mengacu ke tabel kendaraan dan slot_parkir, serta id_parkir pada tabel pembayaran mengacu ke tabel parkir. Dengan adanya FK ini, relasi antar data menjadi terjaga dan konsisten.
+## UNIQUE
+Constraint UNIQUE memastikan bahwa suatu nilai tidak boleh duplikat. Pada database ini, terdapat pada kolom no_polisi di tabel kendaraan, sehingga setiap kendaraan harus memiliki nomor polisi yang berbeda dan tidak boleh sama.
+## NOT NULL
+Constraint NOT NULL digunakan agar suatu kolom wajib diisi (tidak boleh kosong). Contohnya terdapat pada kolom nama, role di tabel user, no_polisi dan jenis_kendaraan di tabel kendaraan, lokasi dan status_slot di tabel slot_parkir, serta beberapa kolom lain seperti id_kendaraan, id_slot, dan waktu_masuk di tabel parkir. Ini memastikan data yang disimpan selalu lengkap dan tidak kosong.
