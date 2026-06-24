@@ -68,10 +68,11 @@ Untuk mengatasi permasalahan tersebut, diperlukan sistem berbasis basis data yan
 ### Tabel Parkir
 1. id_parkir INT
 2. id_kendaraan INT
-3. waktu_masuk DATETIME
-4. waktu_keluar DATETIME
-5. durasi INT
-6. status VARCHAR (20)
+3. id_slot INT
+4. waktu_masuk DATETIME
+5. waktu_keluar DATETIME
+6. durasi INT
+7. status VARCHAR (20)
 
 ### Tabel Slot Parkir
 1. id_slot INT
