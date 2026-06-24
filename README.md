@@ -64,8 +64,8 @@ Untuk mengatasi permasalahan tersebut, diperlukan sistem berbasis basis data yan
 3. jenis_kendaraan VARCHAR (20)
 4. id_user INT
 
-### Tabel Parkir
-1. id_parkir INT
+### Tabel Area Parkir
+1. id_area INT
 2. id_kendaraan INT
 3.	id_slot INT
 4.	waktu_masuk DATETIME
