@@ -127,33 +127,46 @@ https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
 ##
 ## Kamus Data (Data Dictionary)
 ### Tabel User
-|   Field  |  Tipe Data   |     Keterangan    |
-| -------- | ------------ | ----------------- |
-| id_user  | INT          | Primary Key       |
-| nama     | VARCHAR(100) | Nama pengguna     |
-| username | VARCHAR(50)  | Username login    |
-| password | VARCHAR(255) | Password pengguna |
-| role     | VARCHAR(20)  | Jenis pengguna    |
+| Field           | Tipe Data    | Keterangan              |
+| --------------- | ------------ | ----------------------- |
+| id_user         | INT          | Primary Key             |
+| nama            | VARCHAR(100) | Nama pengguna           |
+| role            | ENUM         | Jenis pengguna          |
+| no_hp           | VARCHAR(15)  | Nomor HP                |
 
 ### Tabel Kendaraan
-|      Field      |   Tipe Data  |   Keterangan    |
-| --------------- | ------------ | --------------- |
-| id_kendaraan    | INT          | Primary Key     |
-| no_polisi       | VARCHAR(15)  | Nomor polisi    |
-| jenis_kendaraan | VARCHAR(20)  | Jenis kendaraan |
-| pemilik         | VARCHAR(100) | Nama pemilik    |
-| id_user         | INT          | Foreign Key     |
+| Field           | Tipe Data    | Keterangan              |
+| --------------- | ------------ | ----------------------- |
+| id_kendaraan    | INT          | Primary Key             |
+| no_polisi       | VARCHAR(15)  | Nomor polisi            |
+| jenis_kendaraan | VARCHAR(20)  | Jenis kendaraan         |
+| id_user         | INT          | Foreign Key (User)      |
 
 ### Tabel Parkir
-|     Field    |  Tipe Data  |       Keterangan       |
-| ------------ | ----------- | ---------------------- |
-| id_parkir    | INT         | Primary Key            |
-| id_kendaraan | INT         | Foreign Key            |
-| waktu_masuk  | DATETIME    | Waktu kendaraan masuk  |
-| waktu_keluar | DATETIME    | Waktu kendaraan keluar |
-| durasi       | INT         | Lama parkir            |
-| status       | VARCHAR(20) | Status kendaraan       |
-| id_slot      | INT         | Foreign Key            |
+| Field           | Tipe Data    | Keterangan              |
+| ------------    | ------------ | ----------------------- |
+| id_parkir       | INT          | Primary Key             |
+| id_kendaraan    | INT          | Foreign Key (Kendaraan) |
+| id_slot         | INT          | Foreign Key (Slot)      |
+| waktu_masuk     | DATETIME     | Waktu masuk             |
+| waktu_keluar    | DATETIME     | Waktu keluar            |
+
+### Tabel Slot Parkir
+| Field           | Tipe Data    | Keterangan              |
+| -----------     | ------------ | ----------------------- |
+| id_slot         | INT          | Primary Key             |
+| nomor_slot      | VARCHAR(20)  | Nomor slot              |
+| status_slot     | ENUM         | Status slot             |
+
+### Tabel Pembayaran
+| Field           | Tipe Data    | Keterangan              |
+| -------------   | ------------ | ----------------------- |
+| id_pembayaran   | INT          | Primary Key             |
+| id_parkir       | INT          | Foreign Key (Parkir)    |
+| durasi_jam      | INT          | Lama parkir (jam)       |
+| biaya           | DECIMAL      | Total biaya             |
+| status_bayar    | ENUM         | Status pembayaran       |
+
 
 ##
 ## Normalisasi (UNF → 1NF → 2NF → 3NF)
