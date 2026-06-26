@@ -173,6 +173,7 @@ Pada tahap UNF, seluruh data masih disimpan dalam satu tabel sehingga menyebabka
 | id_user | nama             | role      | no_hp | no_polisi | jenis_kendaraan | lokasi | status_slot | waktu_masuk | waktu_keluar | durasi_jam | biaya | status_bayar |
 | ------- | ---------------- | --------- | ----- | --------- | --------------- | ------ | ----------- | ----------- | ------------ | ---------- | ----- | ------------ |
 | 1       | Dara Puspitasari | Mahasiswa | NULL  | BP1234AA  | Motor           | A1     | Terisi      | 07:08       | 12:00        | NULL       | NULL  | NULL         |
+
 Pada bentuk ini, data pengguna, kendaraan, slot parkir, aktivitas parkir, dan pembayaran masih berada dalam satu tabel sehingga menimbulkan redundansi data dan sulit dikelola.
 
 ## 1NF (First Normal Form)
