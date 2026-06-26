@@ -201,24 +201,69 @@ id_user (PK)
 nama
 role
 no_hp
+
 ### Kendaraan
+id_kendaraan (PK)
+no_polisi
+jenis_kendaraan
+id_user (FK)
 
+### Slot_Parkir
+id_slot (PK)
+lokasi
+status_slot
 
-Menghilangkan pengulangan data kendaraan dan slot.
+### Parkir
+id_parkir (PK)
+id_kendaraan (FK)
+id_slot (FK)
+waktu_masuk
+waktu_keluar
+
+### Pembayaran
+id_pembayaran (PK)
+id_parkir (FK)
+durasi_jam
+biaya
+status_bayar
+
+Pada tahap ini data pengguna, kendaraan, slot parkir, aktivitas parkir, dan pembayaran sudah dipisahkan ke dalam tabel masing-masing sehingga mengurangi redundansi data.
 
 ## 3NF (Third Normal Form)
-Menghilangkan ketergantungan transitif.
-Struktur akhir:
-1. User
-   (id_user, nama, username, password, role)
-2. Kendaraan
-   (id_kendaraan, no_polisi, jenis_kendaraan, pemilik, id_user)
-3. Parkir
-   (id_parkir, id_kendaraan, waktu_masuk, waktu_keluar, durasi, status, id_slot)
-4. Slot_Parkir
-   (id_slot, nomor_slot, status_slot)
+Pada tahap 3NF, seluruh atribut non-key hanya bergantung pada primary key masing-masing tabel dan tidak memiliki ketergantungan transitif.
 
-Seluruh atribut non-key hanya bergantung pada primary key masing-masing.
+### Tabel User
+id_user INT
+nama VARCHAR(100)
+role ENUM('Mahasiswa','Dosen','Staff','Pengunjung')
+no_hp VARCHAR(15)
+
+### Tabel Kendaraan
+id_kendaraan INT
+no_polisi VARCHAR(15)
+jenis_kendaraan VARCHAR(20)
+d_user INT
+
+### Tabel Slot_Parkir
+id_slot INT
+lokasi VARCHAR(20)
+status_slot ENUM('Kosong','Terisi')
+
+### Tabel Parkir
+id_parkir INT
+id_kendaraan INT
+id_slot INT
+waktu_masuk DATETIME
+waktu_keluar DATETIME
+
+### Tabel Pembayaran
+id_pembayaran INT
+id_parkir INT
+durasi_jam INT
+biaya DECIMAL(10,2)
+status_bayar ENUM('Belum Bayar','Lunas')
+
+Dengan struktur ini, setiap atribut non-key hanya bergantung pada primary key tabel masing-masing. Basis data telah memenuhi Third Normal Form (3NF), sehingga redundansi data dapat diminimalkan dan integritas data lebih terjaga.
 
 ## Relevasi Analisis Kebutuhan
 Berdasarkan hasil perancangan basis data dan normalisasi, terdapat beberapa revisi:
