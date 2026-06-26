@@ -169,27 +169,39 @@ https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
 ##
 ##  Normalisasi (UNF → 1NF → 2NF → 3NF)
 ### UNF (Unnormalized Form)
-
-| id_user | nama  | kendaraan       | parkir      | slot |
-| ------- | ----- | --------------- | ----------- | ---- |
-| 001     | Dea   | BP1234XX, Motor | Masuk 08.00 | A01  |
-
-Masih terdapat data gabungan dan redundansi.
+Pada tahap UNF, seluruh data masih disimpan dalam satu tabel sehingga menyebabkan redundansi dan pengulangan data.
+| id_user | nama             | role      | no_hp | no_polisi | jenis_kendaraan | lokasi | status_slot | waktu_masuk | waktu_keluar | durasi_jam | biaya | status_bayar |
+| ------- | ---------------- | --------- | ----- | --------- | --------------- | ------ | ----------- | ----------- | ------------ | ---------- | ----- | ------------ |
+| 1       | Dara Puspitasari | Mahasiswa | NULL  | BP1234AA  | Motor           | A1     | Terisi      | 07:08       | 12:00        | NULL       | NULL  | NULL         |
+Pada bentuk ini, data pengguna, kendaraan, slot parkir, aktivitas parkir, dan pembayaran masih berada dalam satu tabel sehingga menimbulkan redundansi data dan sulit dikelola.
 
 ## 1NF (First Normal Form)
-Data dipecah menjadi atribut tunggal.
-| id_user | nama | no_polisi | jenis_kendaraan | nomor_slot |
-| ------- | ---- | --------- | --------------- | ---------- |
+Pada tahap 1NF, setiap atribut harus memiliki nilai tunggal (atomic value) dan tidak boleh terdapat kelompok data yang berulang.
+### Tabel User
+| id_user | nama             | role      | no_hp |
+| ------- | ---------------- | --------- | ----- |
+| 1       | Dara Puspitasari | Mahasiswa | NULL  |
+### Tabel Kendaraan
+| id_kendaraan | no_polisi | jenis_kendaraan |
+| ------------ | --------- | --------------- |
+| 1            | BP1234AA  | Motor           |
+### Tabel Slot Parkir
+| id_slot | lokasi | status_slot |
+| ------- | ------ | ----------- |
+| 1       | A1     | Terisi      |
 
-Setiap kolom sudah memiliki satu nilai.
+Seluruh kolom telah memiliki satu nilai untuk setiap atribut sehingga memenuhi syarat First Normal Form (1NF).
 
 ## 2NF (Second Normal Form)
-Data dipisahkan berdasarkan ketergantungan terhadap primary key.
-Tabel:
-* User
-* Kendaraan
-* Parkir
-* Slot_Parkir
+Pada tahap 2NF, data dipisahkan berdasarkan ketergantungan terhadap primary key sehingga setiap atribut non-key bergantung sepenuhnya pada primary key tabelnya.
+Tabel yang terbentuk adalah:
+### User 
+id_user (PK)
+nama
+role
+no_hp
+### Kendaraan
+
 
 Menghilangkan pengulangan data kendaraan dan slot.
 
