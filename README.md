@@ -309,9 +309,9 @@ Tahap berikutnya adalah pengisian data pada tabel parkir sebanyak 13 record. Tab
 ## 4. Minimal 10 Query SQL
 <img width="1232" height="913" alt="image" src="https://github.com/user-attachments/assets/62ec7da8-f43b-4edf-ba3f-7598f6359980" />
 <img width="1146" height="995" alt="image" src="https://github.com/user-attachments/assets/ceaaabec-9e84-42e2-a63d-001b0779edcc" />
-<img width="1146" height="995" alt="image" src="https://github.com/user-attachments/assets/7192ba45-d495-4bfb-808a-61f8463ac4ea" />
-<img width="1146" height="995" alt="image" src="https://github.com/user-attachments/assets/0f5528a3-da10-4e7e-b8c3-0726966d9456" />
-<img width="1146" height="995" alt="image" src="https://github.com/user-attachments/assets/b9313fb9-cf17-42d5-a8a2-c7e71218ffce" />
+<img width="947" height="170" alt="Cuplikan layar 2026-06-26 195917" src="https://github.com/user-attachments/assets/45c158ee-f71e-4d61-ba8d-1445ed7e00cc" />
+<img width="1093" height="1034" alt="Cuplikan layar 2026-06-26 201132" src="https://github.com/user-attachments/assets/e91f9a07-bec8-4ed0-ad2f-0e8602b14650" />
+<img width="1185" height="864" alt="Cuplikan layar 2026-06-26 201156" src="https://github.com/user-attachments/assets/a96e4ba5-f5e6-4769-8902-4d26eb277e91" />
 
 ## 5. Skenario pengujian
 <img width="1135" height="626" alt="Cuplikan layar 2026-06-24 201552" src="https://github.com/user-attachments/assets/fd09cbe7-a584-4939-880c-7f7e2f3ad21c" />
