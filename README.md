@@ -57,7 +57,6 @@ Untuk mengatasi permasalahan tersebut, diperlukan sistem berbasis basis data yan
 3.	role ENUM 
 4.	no_hp VARCHAR (15)
 
-
 ### Tabel Kendaraan 
 1. id_kendaraan INT
 2. no_polisi VARCHAR (15)
@@ -70,7 +69,6 @@ Untuk mengatasi permasalahan tersebut, diperlukan sistem berbasis basis data yan
 3.	id_slot INT
 4.	waktu_masuk DATETIME
 5.	waktu_keluar DATETIME
-
 
 ### Tabel Slot Parkir
 1. id_slot INT
@@ -106,7 +104,7 @@ https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
 <img width="1852" height="929" alt="Untitled Diagram" src="https://github.com/user-attachments/assets/2d1f827b-1e7c-447e-a7cd-76e09318a883" />
 
 ##
-## Penjelasan Entitas Dan Relasi
+##  Penjelasan Entitas Dan Relasi
 ### Entitas 
 1. User
    Digunakan Digunakan untuk menyimpan data seluruh pengguna sistem seperti admin, mahasiswa, dosen, staf kampus, petugas parkir, dan pengunjung.
@@ -125,7 +123,7 @@ https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
    Satu slot dapat digunakan berkali-kali pada transaksi parkir yang berbeda.
 
 ##
-## Kamus Data (Data Dictionary)
+##  Kamus Data (Data Dictionary)
 ### Tabel User
 | Field           | Tipe Data    | Keterangan              |
 | --------------- | ------------ | ----------------------- |
@@ -169,7 +167,7 @@ https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
 
 
 ##
-## Normalisasi (UNF → 1NF → 2NF → 3NF)
+##  Normalisasi (UNF → 1NF → 2NF → 3NF)
 ### UNF (Unnormalized Form)
 
 | id_user | nama  | kendaraan       | parkir      | slot |
