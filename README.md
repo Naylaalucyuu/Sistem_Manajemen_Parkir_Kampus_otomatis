@@ -101,7 +101,7 @@ https://github.com/Naylaalucyuu/Sistem_Manajemen_Parkir_Kampus_otomatis.git
 # PROGRESS 2
 ## ERD (Entity Relationship Diagram)
 ### UNF (Unnormalized Form)
-<img width="1852" height="929" alt="Untitled Diagram" src="https://github.com/user-attachments/assets/2d1f827b-1e7c-447e-a7cd-76e09318a883" />
+<img width="1851" height="921" alt="Untitled Diagram (1)" src="https://github.com/user-attachments/assets/20f123dd-d34c-462b-b029-545b0363a619" />
 
 ##
 ##  Penjelasan Entitas Dan Relasi
