@@ -197,35 +197,35 @@ Seluruh kolom telah memiliki satu nilai untuk setiap atribut sehingga memenuhi s
 Pada tahap 2NF, data dipisahkan berdasarkan ketergantungan terhadap primary key sehingga setiap atribut non-key bergantung sepenuhnya pada primary key tabelnya.
 Tabel yang terbentuk adalah:
 ### User 
-id_user (PK)
-nama
-role
-no_hp
+* id_user (PK)
+* nama
+* role
+* no_hp
 
 ### Kendaraan
-id_kendaraan (PK)
-no_polisi
-jenis_kendaraan
-id_user (FK)
+* id_kendaraan (PK)
+* no_polisi
+* jenis_kendaraan
+* id_user (FK)
 
 ### Slot_Parkir
-id_slot (PK)
-lokasi
-status_slot
+*id_slot (PK)
+* lokasi
+* status_slot
 
 ### Parkir
-id_parkir (PK)
-id_kendaraan (FK)
-id_slot (FK)
-waktu_masuk
-waktu_keluar
+* id_parkir (PK)
+* id_kendaraan (FK)
+* id_slot (FK)
+* waktu_masuk
+* waktu_keluar
 
 ### Pembayaran
-id_pembayaran (PK)
-id_parkir (FK)
-durasi_jam
-biaya
-status_bayar
+* id_pembayaran (PK)
+* id_parkir (FK)
+* durasi_jam
+* biaya
+* status_bayar
 
 Pada tahap ini data pengguna, kendaraan, slot parkir, aktivitas parkir, dan pembayaran sudah dipisahkan ke dalam tabel masing-masing sehingga mengurangi redundansi data.
 
@@ -233,35 +233,35 @@ Pada tahap ini data pengguna, kendaraan, slot parkir, aktivitas parkir, dan pemb
 Pada tahap 3NF, seluruh atribut non-key hanya bergantung pada primary key masing-masing tabel dan tidak memiliki ketergantungan transitif.
 
 ### Tabel User
-id_user INT
-nama VARCHAR(100)
-role ENUM('Mahasiswa','Dosen','Staff','Pengunjung')
-no_hp VARCHAR(15)
+* id_user INT
+* nama VARCHAR(100)
+* role ENUM('Mahasiswa','Dosen','Staff','Pengunjung')
+* no_hp VARCHAR(15)
 
 ### Tabel Kendaraan
-id_kendaraan INT
-no_polisi VARCHAR(15)
-jenis_kendaraan VARCHAR(20)
-d_user INT
+* id_kendaraan INT
+* no_polisi VARCHAR(15)
+* jenis_kendaraan VARCHAR(20)
+* d_user INT
 
 ### Tabel Slot_Parkir
-id_slot INT
-lokasi VARCHAR(20)
-status_slot ENUM('Kosong','Terisi')
+* id_slot INT
+* lokasi VARCHAR(20)
+* status_slot ENUM('Kosong','Terisi')
 
 ### Tabel Parkir
-id_parkir INT
-id_kendaraan INT
-id_slot INT
-waktu_masuk DATETIME
-waktu_keluar DATETIME
+* id_parkir INT
+* id_kendaraan INT
+* id_slot INT
+* waktu_masuk DATETIME
+* waktu_keluar DATETIME
 
 ### Tabel Pembayaran
-id_pembayaran INT
-id_parkir INT
-durasi_jam INT
-biaya DECIMAL(10,2)
-status_bayar ENUM('Belum Bayar','Lunas')
+* id_pembayaran INT
+* id_parkir INT
+* durasi_jam INT
+* biaya DECIMAL(10,2)
+* status_bayar ENUM('Belum Bayar','Lunas')
 
 Dengan struktur ini, setiap atribut non-key hanya bergantung pada primary key tabel masing-masing. Basis data telah memenuhi Third Normal Form (3NF), sehingga redundansi data dapat diminimalkan dan integritas data lebih terjaga.
 
